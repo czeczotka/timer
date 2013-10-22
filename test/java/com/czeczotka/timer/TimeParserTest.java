@@ -1,5 +1,6 @@
-package timer;
+package com.czeczotka.timer;
 
+import com.czeczotka.timer.TimeParser;
 import org.testng.annotations.Test;
 
 public class TimeParserTest {

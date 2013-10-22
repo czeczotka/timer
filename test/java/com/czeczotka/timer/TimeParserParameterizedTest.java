@@ -1,5 +1,6 @@
-package timer;
+package com.czeczotka.timer;
 
+import com.czeczotka.timer.TimeParser;
 import static org.testng.Assert.assertEquals;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;

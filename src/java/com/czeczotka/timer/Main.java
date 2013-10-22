@@ -1,6 +1,6 @@
-package timer;
+package com.czeczotka.timer;
 
-import static timer.Common.*;
+import static com.czeczotka.timer.Common.*;
 
 import java.util.Arrays;
 import java.util.List;

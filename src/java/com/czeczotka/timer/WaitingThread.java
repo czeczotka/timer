@@ -1,4 +1,4 @@
-package timer;
+package com.czeczotka.timer;
 
 
 /**

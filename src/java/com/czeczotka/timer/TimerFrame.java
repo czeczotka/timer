@@ -1,11 +1,11 @@
-package timer;
+package com.czeczotka.timer;
 
 
-import static timer.Common.DEFAULT_INPUT_TEXT;
-import static timer.Common.FINISHED;
-import static timer.Common.FRAME_TITLE;
-import static timer.Common.START;
-import static timer.Common.STOP;
+import static com.czeczotka.timer.Common.DEFAULT_INPUT_TEXT;
+import static com.czeczotka.timer.Common.FINISHED;
+import static com.czeczotka.timer.Common.FRAME_TITLE;
+import static com.czeczotka.timer.Common.START;
+import static com.czeczotka.timer.Common.STOP;
 
 import java.awt.Dimension;
 import java.awt.Toolkit;
