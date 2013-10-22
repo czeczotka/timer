@@ -1,26 +1,26 @@
 package timer;
 
-import org.junit.Test;
+import org.testng.annotations.Test;
 
 public class TimeParserTest {
 
-	@Test (expected = IllegalArgumentException.class)
-	public void parse_null () {
-		TimeParser.parse (null);
-	}
-	
-	@Test (expected = IllegalArgumentException.class)
-	public void parse_empty () {
-		TimeParser.parse ("");
-	}
-	
-	@Test (expected = IllegalArgumentException.class)
-	public void parse_minusValue () {
-		TimeParser.parse ("-2");
-	}
-	
-	@Test (expected = IllegalArgumentException.class)
-	public void parse_wrongInput () {
-		TimeParser.parse ("abc");
-	}
+    @Test (expectedExceptions = IllegalArgumentException.class)
+    public void parse_null () {
+        TimeParser.parse (null);
+    }
+
+    @Test (expectedExceptions = IllegalArgumentException.class)
+    public void parse_empty () {
+        TimeParser.parse ("");
+    }
+
+    @Test (expectedExceptions = IllegalArgumentException.class)
+    public void parse_minusValue () {
+        TimeParser.parse ("-2");
+    }
+
+    @Test (expectedExceptions = IllegalArgumentException.class)
+    public void parse_wrongInput () {
+        TimeParser.parse ("abc");
+    }
 }
