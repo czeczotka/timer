@@ -14,20 +14,18 @@ import java.util.List;
  */
 public class Main {
 	
-	
-	private static List<String> infoParams = Arrays.asList (
-			"-version", "-info", "-help");
-	
-	private static String INFO = 
-			APP_NAME + " version " + VERSION + ". This program is freeware.\n" +
-			"Jakub Czeczotka. May 2007 - October 2009. \n";
+    private static final List<String> infoParams = 
+            Arrays.asList ("-version", "-info", "-help");
 
-	
-	public static void main (String[] args) {
-		if (args.length == 1 && infoParams.contains(args[0])) {
-			System.out.println (INFO);
-		} else {
-			new TimerFrame ();
-		}
-	}
+    private static final String INFO = 
+            APP_NAME + " version " + VERSION + ". This program is freeware.\n" +
+            "Jakub Czeczotka. May 2007 - October 2009. \n";
+
+    public static void main (String[] args) {
+        if (args.length == 1 && infoParams.contains(args[0])) {
+            System.out.println (INFO);
+        } else {
+            new TimerFrame ();
+        }
+    }
 }
