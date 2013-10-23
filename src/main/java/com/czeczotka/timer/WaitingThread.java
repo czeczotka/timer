@@ -16,6 +16,7 @@ public class WaitingThread extends Thread {
         this.frame = frame;
     }
 
+    @Override
     public void run ( ) {
         long firstTime = System.currentTimeMillis ();
         long secondTime = 0;

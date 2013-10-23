@@ -21,7 +21,7 @@ public class Main {
             APP_NAME + " version " + VERSION + ". This program is freeware.\n" +
             "Jakub Czeczotka. May 2007 - October 2009. \n";
 
-    public static void main (String[] args) {
+    public static void main (String ... args) {
         if (args.length == 1 && infoParams.contains(args[0])) {
             System.out.println (INFO);
         } else {
