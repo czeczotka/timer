@@ -28,7 +28,7 @@ public class TimeParserTest {
     
     @Test (dataProvider = "parameters")
     public void executeTest (int time, String value) throws Exception {
-        assertEquals (time, TimeParser.parse (value));
+        assertEquals (TimeParser.parse (value), time);
     }    
     
     @DataProvider (name = "parameters")
@@ -40,7 +40,8 @@ public class TimeParserTest {
             { 15 ,	"0:15" 	},
             { 15 ,	":15" 	},
             { 0 ,	":0" 	},
-            { 75 ,	"1:15" 	}
+            { 75 ,	"1:15" 	},
+            { 6010 ,	"100:10"}
         };
     }    
 }
