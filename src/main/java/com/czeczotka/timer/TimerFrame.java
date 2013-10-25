@@ -1,6 +1,5 @@
 package com.czeczotka.timer;
 
-
 import static com.czeczotka.timer.Common.DEFAULT_INPUT_TEXT;
 import static com.czeczotka.timer.Common.FINISHED;
 import static com.czeczotka.timer.Common.FRAME_TITLE;
@@ -29,14 +28,14 @@ public class TimerFrame extends JFrame {
 	
     private static final long serialVersionUID = 1689987348707738229L;
 
-    private JTextField input;
-    private JButton button;
-    private Box mainBox;
-    private JPanel firstPanel;
-    private JPanel secondPanel;
-    private JProgressBar progressBar;
-    private StartTimerListener startListener;
-    private StopTimerListener stopListener;
+    private final JTextField input;
+    private final JButton button;
+    private final Box mainBox;
+    private final JPanel firstPanel;
+    private final JPanel secondPanel;
+    private final JProgressBar progressBar;
+    private final StartTimerListener startListener;
+    private final StopTimerListener stopListener;
     private WaitingThread thread;
 
     static {
@@ -85,9 +84,9 @@ public class TimerFrame extends JFrame {
         int seconds = progress % 60;
         StringBuilder s = new StringBuilder ();
         if (minutes > 0) {
-            s.append (minutes + " min ");
+            s.append (minutes).append (" min ");
         }
-        s.append (seconds + " sec");
+        s.append (seconds).append (" sec");
         this.progressBar.setString (s.toString ());
     }
 
@@ -122,9 +121,8 @@ public class TimerFrame extends JFrame {
     }
 
     private class StartTimerListener implements ActionListener {
-
-        public void actionPerformed (ActionEvent e) {
-            int waitingTime = 0;
+        @Override public void actionPerformed (ActionEvent e) {
+            int waitingTime;
             try {
                 waitingTime = TimeParser.parse (input.getText ());
             } catch (IllegalArgumentException ex) {
@@ -141,8 +139,8 @@ public class TimerFrame extends JFrame {
         }
     }
 
-    private class StopTimerListener implements ActionListener {
-        public void actionPerformed (ActionEvent e) {
+    private class StopTimerListener implements ActionListener {        
+        @Override public void actionPerformed (ActionEvent e) {
             thread.interrupt ();
             TimerFrame.this.ready ();
         }

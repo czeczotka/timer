@@ -1,6 +1,5 @@
 package com.czeczotka.timer;
 
-
 /**
  * Thread used for waiting particular amount of time. 
  * 
@@ -8,8 +7,8 @@ package com.czeczotka.timer;
  */
 public class WaitingThread extends Thread {
 
-    private int time;
-    private TimerFrame frame;
+    private final int time;
+    private final TimerFrame frame;
 
     public WaitingThread (int time, TimerFrame frame) {
         this.time = time;
@@ -19,8 +18,8 @@ public class WaitingThread extends Thread {
     @Override
     public void run ( ) {
         long firstTime = System.currentTimeMillis ();
-        long secondTime = 0;
-        int now = 0;
+        long secondTime;
+        int now;
         try {
             for (int i = 0; i < time; i++) {
                 if (isInterrupted ()) {
