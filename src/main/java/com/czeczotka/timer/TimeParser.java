@@ -13,7 +13,7 @@ public class TimeParser {
 
     private static final String timePattern = "([\\d]*)(:[\\d]+)?";
 
-    public static int parse (String time) throws IllegalArgumentException {
+    public int parse (String time) throws IllegalArgumentException {
 
         if (time == null || time.length () == 0) {
             throw new IllegalArgumentException ();

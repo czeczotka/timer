@@ -1,34 +1,43 @@
 package com.czeczotka.timer;
 
 import static org.testng.Assert.assertEquals;
+
+import org.junit.Before;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 public class TimeParserTest {
 
+    TimeParser parser;
+
+    @Before
+    public void setUp () {
+        parser = new TimeParser ();
+    }
+
     @Test (expectedExceptions = IllegalArgumentException.class)
     public void parse_null () {
-        TimeParser.parse (null);
+        parser.parse (null);
     }
 
     @Test (expectedExceptions = IllegalArgumentException.class)
     public void parse_empty () {
-        TimeParser.parse ("");
+        parser.parse ("");
     }
 
     @Test (expectedExceptions = IllegalArgumentException.class)
     public void parse_minusValue () {
-        TimeParser.parse ("-2");
+        parser.parse ("-2");
     }
 
     @Test (expectedExceptions = IllegalArgumentException.class)
     public void parse_wrongInput () {
-        TimeParser.parse ("abc");
+        parser.parse ("abc");
     }
     
     @Test (dataProvider = "parameters")
     public void executeTest (int time, String value) throws Exception {
-        assertEquals (TimeParser.parse (value), time);
+        assertEquals (parser.parse (value), time);
     }    
     
     @DataProvider (name = "parameters")

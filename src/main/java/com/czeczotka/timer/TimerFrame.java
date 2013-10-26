@@ -30,12 +30,10 @@ public class TimerFrame extends JFrame {
 
     private final JTextField input;
     private final JButton button;
-    private final Box mainBox;
-    private final JPanel firstPanel;
-    private final JPanel secondPanel;
     private final JProgressBar progressBar;
     private final StartTimerListener startListener;
     private final StopTimerListener stopListener;
+    private final TimeParser timeParser;
     private WaitingThread thread;
 
     static {
@@ -48,10 +46,11 @@ public class TimerFrame extends JFrame {
 
         startListener = new StartTimerListener ();
         stopListener = new StopTimerListener ();
+        timeParser = new TimeParser ();
 
-        mainBox = Box.createVerticalBox ();
-        firstPanel = new JPanel ();
-        secondPanel = new JPanel ();
+        Box mainBox = Box.createVerticalBox ();
+        JPanel firstPanel = new JPanel ();
+        JPanel secondPanel = new JPanel ();
         button = new JButton ();
         input = new JTextField (7);
         input.setHorizontalAlignment (JTextField.CENTER);
@@ -124,7 +123,7 @@ public class TimerFrame extends JFrame {
         @Override public void actionPerformed (ActionEvent e) {
             int waitingTime;
             try {
-                waitingTime = TimeParser.parse (input.getText ());
+                waitingTime = timeParser.parse (input.getText ());
             } catch (IllegalArgumentException ex) {
                 input.selectAll ();
                 input.requestFocus ();
