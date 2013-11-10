@@ -1,16 +1,16 @@
 package com.czeczotka.timer;
 
-import static org.testng.Assert.assertEquals;
-
-import org.junit.Before;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import static org.testng.Assert.assertEquals;
 
 public class TimeParserTest {
 
     TimeParser parser;
 
-    @Before
+    @BeforeTest
     public void setUp () {
         parser = new TimeParser ();
     }

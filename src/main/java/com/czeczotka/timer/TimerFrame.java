@@ -11,13 +11,7 @@ import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import javax.swing.Box;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JProgressBar;
-import javax.swing.JTextField;
+import javax.swing.*;
 
 /**
  * Main frame of the application. 
@@ -42,7 +36,7 @@ public class TimerFrame extends JFrame {
 
     public TimerFrame () {
         super (FRAME_TITLE);
-        this.setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation (WindowConstants.EXIT_ON_CLOSE);
 
         startListener = new StartTimerListener ();
         stopListener = new StopTimerListener ();
