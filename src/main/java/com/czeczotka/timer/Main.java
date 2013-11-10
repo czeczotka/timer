@@ -9,7 +9,6 @@ import java.util.List;
  * Simple Timer application.
  * 
  * @author Jakub Czeczotka
- * @version 1.1
  * @since May 2007
  */
 public class Main {
