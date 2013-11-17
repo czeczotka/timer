@@ -18,7 +18,7 @@ public class Main {
 
     private static final String INFO = 
             APP_NAME + " version " + VERSION + ". This program is freeware.\n" +
-            "Jakub Czeczotka. May 2007 - October 2009. \n";
+            "Jakub Czeczotka, May 2007. \n";
 
     public static void main (String ... args) {
         if (args.length == 1 && infoParams.contains(args[0])) {
