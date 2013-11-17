@@ -1,4 +1,0 @@
-timer
-=====
-
-Java Timer
