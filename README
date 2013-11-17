@@ -5,11 +5,9 @@
          Jakub Czeczótka
 
 
-A Java/Swing timer application which I wrote back in May 2007. Recently I did minor changes
-to update the app to Java 7.
+A Java/Swing timer application which I wrote back in May 2007. Recently I did minor changes to update the app to Java 7.
 
-This application is primarily meant to help you in your tea brewing process but is in no way
-limited to that.
+This application is primarily meant to help you in your tea brewing process but is in no way limited to that.
 
 At some point in the future I may:
  * change the concurrency model
