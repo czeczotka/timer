@@ -4,7 +4,8 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import static org.testng.Assert.assertEquals;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class TimeParserTest {
 
@@ -37,8 +38,8 @@ public class TimeParserTest {
     
     @Test (dataProvider = "parameters")
     public void executeTest (int time, String value) throws Exception {
-        assertEquals (parser.parse (value), time);
-    }    
+        assertThat (parser.parse (value), equalTo (time));
+    }
     
     @DataProvider (name = "parameters")
     public Object[][] parameters () {
